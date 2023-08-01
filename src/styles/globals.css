@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Sora", sans-serif;
+}
+@font-face {
+  font-family: "sora";
+  font-weight: bold;
+  src: url("../../public//assets//fonts/Sora-Bold.ttf");
+}
+@font-face {
+  font-family: "sora";
+  font-weight: 600;
+  src: url("../../public//assets//fonts/Sora-SemiBold.ttf");
+}
+@font-face {
+  font-family: "sora";
+  font-weight: 400;
+  src: url("../../public//assets//fonts/Sora-Regular.ttf");
+}
+
+body {
+  height: 100%;
+}

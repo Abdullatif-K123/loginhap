@@ -1,0 +1,41 @@
+/* Styling input section  */
+.inputMain {
+  display: flex;
+  flex-direction: column;
+}
+.inputMain > label {
+  font-size: 14px;
+  color: rgb(59, 59, 59);
+  font-family: "sora", sans-serif;
+  font-weight: 400;
+  width: 133pt;
+  height: 18pt;
+  padding-left: 17px;
+}
+.inputsection {
+  border-radius: 30pt;
+  border: 1pt solid rgb(222, 222, 222);
+  outline: none;
+  height: 38px;
+  padding: 0px 20px;
+  font-family: "Sora", sans-serif;
+  color: rgb(59, 59, 59);
+}
+
+/* Button section */
+.btnLogin {
+  width: 100%;
+  background-color: rgb(255, 192, 69);
+  box-shadow: none;
+  border-radius: 30pt;
+  height: 50px;
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  text-transform: none;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+}
+.btnLogin:hover {
+  background-color: rgb(251, 178, 34);
+  box-shadow: none;
+}

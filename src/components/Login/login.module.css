@@ -1,0 +1,91 @@
+/* Login page styling */
+.container {
+  height: 100vh;
+  background: rgb(239, 232, 201);
+  background: linear-gradient(
+    128deg,
+    rgba(239, 232, 201, 1) 14%,
+    rgba(214, 232, 232, 1) 38%,
+    rgba(211, 230, 235, 1) 69%,
+    rgba(223, 236, 224, 1) 86%
+  );
+}
+.boxContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.headSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15pt 0 30pt 0;
+  width: 506px;
+}
+.languageChange {
+  display: flex;
+  column-gap: 12px;
+  color: rgb(85, 155, 180);
+  font-family: "sora";
+  font-weight: bold;
+}
+.languageChange > div {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+.languageChange > p {
+  font-size: 14pt;
+}
+.iconArrow {
+  width: 20.8pt;
+  height: 20.2pt;
+  cursor: pointer;
+  color: rgb(59, 59, 59);
+}
+.loginBox {
+  background-color: rgb(255, 255, 255);
+  width: 436px;
+  min-height: 234px;
+  padding: 30px 35px 40px 35px;
+  border-radius: 20px;
+  opacity: 95%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.loginBox > p {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-family: "sora", sans-serif;
+  font-weight: 600;
+  size-adjust: 600;
+}
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+/* Form section */
+
+.rememberForget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12pt;
+  color: rgb(112, 112, 112);
+  font-family: "Sora", sans-serif;
+  padding: 18px 0px;
+}
+.rememberForget > p {
+  font-size: 10pt;
+  cursor: pointer;
+}
+.remember {
+  font-size: 10pt;
+}
+.Checkbox {
+  border-radius: 10px;
+  color: rgb(85, 155, 180);
+}
