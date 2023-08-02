@@ -69,6 +69,12 @@
   flex-direction: column;
   row-gap: 25px;
 }
+.loginContainer > p {
+  font-size: 10px;
+  color: rgb(183, 65, 0);
+  margin-top: -15px;
+  margin-left: 17px;
+}
 
 /* Form section */
 

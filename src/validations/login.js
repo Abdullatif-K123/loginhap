@@ -2,7 +2,8 @@ import * as yup from "yup";
 
 const schema = yup.object().shape({
   usernameOrEmail: yup
-    .mixed()
+    .string()
+    .max(50, "Username or email must be at most 50 characters")
     .test("usernameOrEmail", "Invalid username or email", function (value) {
       const { path, createError } = this;
 
@@ -22,8 +23,21 @@ const schema = yup.object().shape({
     .required("Username or email is required"),
   password: yup
     .string()
-    .min(8, "Password must be at least 8 characters")
-    .required("Password is required"),
+    .min(16, "Your password must be at least 16 characters long")
+    .matches(
+      /[a-z]/,
+      "Your password must include at least one lowercase letter"
+    )
+    .matches(
+      /[A-Z]/,
+      "Your password must include at least one uppercase letter"
+    )
+    .matches(/[0-9]/, "Your password must include at least one number")
+    .matches(
+      /[!@#$%^&*]/,
+      "Your password must include at least one special character"
+    )
+    .required("Enter your password in this field"),
 });
 
 export default schema;

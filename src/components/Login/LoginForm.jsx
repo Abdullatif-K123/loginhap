@@ -76,6 +76,7 @@ const LoginForm = () => {
                   onBlur={handleBlur}
                   value={values.usernameOrEmail}
                 />
+                <p>{errors.usernameOrEmail}</p>
                 <Input
                   label={"Password"}
                   id={"password"}
@@ -87,7 +88,7 @@ const LoginForm = () => {
                   onBlur={handleBlur}
                   value={values.password}
                 />
-
+                <p>{errors.password}</p>
                 <Buttons title={"Login"} type={"submit"} />
               </Form>
             </div>
