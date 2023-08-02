@@ -12,6 +12,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Fade from "@mui/material/Fade";
 const LoginForm = () => {
+  //DropDown languages selection implements
   const [anchorEl, setAnchorEl] = useState(null);
   const [language, setLanguage] = useState("English");
   var open = Boolean(anchorEl);
@@ -58,7 +59,7 @@ const LoginForm = () => {
             </div>
             <Image
               src={arrowDown}
-              className={classes.iconArrow}
+              className={`${classes.iconArrow} ${open ? classes.rotate : null}`}
               alt="arrow_down"
             />
           </div>

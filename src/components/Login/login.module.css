@@ -47,6 +47,9 @@
   height: 6.7px;
   cursor: pointer;
 }
+.rotate {
+  transform: rotate(180deg);
+}
 .loginBox {
   background-color: rgb(255, 255, 255);
   width: 431px;
