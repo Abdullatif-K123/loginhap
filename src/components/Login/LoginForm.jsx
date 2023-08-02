@@ -4,8 +4,6 @@ import hapsterLogo from "/public/assets/img/LOGO-hapster-quadri-cmjn.png";
 import Image from "next/image";
 import Input from "../elements/Input";
 import Buttons from "../elements/Button";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
 import global from "/public/assets/svg/global.svg";
 import arrowDown from "/public/assets/svg/arrow.svg";
 import { Formik, Form } from "formik";

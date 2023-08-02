@@ -30,8 +30,8 @@
   column-gap: 12px;
   align-items: center;
   color: rgb(85, 155, 180);
-  font-family: "sora";
-  font-weight: bold;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
 }
 .languageChange > div {
   display: flex;
@@ -60,7 +60,7 @@
 .loginBox > p {
   color: rgb(0, 0, 0);
   font-size: 18px;
-  font-family: "sora", sans-serif;
+  font-family: "Sora", sans-serif;
   font-weight: 600;
   size-adjust: 600;
 }
