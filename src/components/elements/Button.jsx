@@ -3,9 +3,9 @@ import classes from "./elements.module.css";
 import { Button } from "@mui/material";
 const Buttons = ({ title, type }) => {
   return (
-    <Button variant="contained" type={type} className={classes.btnLogin}>
+    <button variant="contained" type={type} className={classes.btnLogin}>
       {title}
-    </Button>
+    </button>
   );
 };
 
