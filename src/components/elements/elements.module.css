@@ -21,6 +21,9 @@
   font-family: "Sora", sans-serif;
   color: rgb(59, 59, 59);
 }
+.inputError {
+  border-color: red;
+}
 
 /* Button section */
 .btnLogin {

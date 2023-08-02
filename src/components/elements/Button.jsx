@@ -1,10 +1,10 @@
 import React from "react";
 import classes from "./elements.module.css";
 import { Button } from "@mui/material";
-const Buttons = () => {
+const Buttons = ({ title, type }) => {
   return (
-    <Button variant="contained" className={classes.btnLogin}>
-      Login
+    <Button variant="contained" type={type} className={classes.btnLogin}>
+      {title}
     </Button>
   );
 };

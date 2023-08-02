@@ -20,7 +20,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 15pt 0 30pt 0;
-  width: 506px;
+  width: 505px;
+}
+.logoIcon {
+  margin-left: -7px;
 }
 .languageChange {
   display: flex;
@@ -45,7 +48,7 @@
 }
 .loginBox {
   background-color: rgb(255, 255, 255);
-  width: 436px;
+  width: 431px;
   min-height: 234px;
   padding: 30px 35px 40px 35px;
   border-radius: 20px;
@@ -84,6 +87,7 @@
 }
 .remember {
   font-size: 10pt;
+  margin-left: -3px;
 }
 .Checkbox {
   border-radius: 10px;
