@@ -152,13 +152,13 @@
 /* Styles for screens 360px wide or less */
 @media (max-width: 361px) {
   .headSection {
-    max-width: 335px;
+    max-width: 325px;
   }
   .languageChange > p {
     font-size: 12pt;
   }
   .loginBox {
-    max-width: 310px;
+    max-width: 300px;
     padding: 30px 15px 30px 15.5px;
     row-gap: 18px;
   }
@@ -169,11 +169,13 @@
     row-gap: 22px;
   }
   .rememberForget {
-    font-size: 11pt;
     padding: 15px 0px;
   }
+  .rememberForget > p {
+    font-size: 9pt;
+  }
   .remember {
-    font-size: 10pt;
+    font-size: 9pt;
   }
   .logoIcon {
     width: 160px;
