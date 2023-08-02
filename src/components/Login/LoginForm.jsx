@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./login.module.css";
 import hapsterLogo from "/public/assets/img/LOGO-hapster-quadri-cmjn.png";
 import Image from "next/image";
@@ -8,7 +8,26 @@ import global from "/public/assets/svg/global.svg";
 import arrowDown from "/public/assets/svg/arrow.svg";
 import { Formik, Form } from "formik";
 import schema from "@/validations/login";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import Fade from "@mui/material/Fade";
 const LoginForm = () => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [language, setLanguage] = useState("English");
+  var open = Boolean(anchorEl);
+  console.log(open);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  //Changing the language handler
+  const handleClickLang = (lang) => {
+    setLanguage(lang);
+    handleClose();
+  };
   return (
     <div className={classes.container}>
       <div className={classes.boxContainer}>
@@ -20,7 +39,14 @@ const LoginForm = () => {
             alt="hapster logo"
             className={classes.logoIcon}
           />
-          <div className={classes.languageChange}>
+          <div
+            className={classes.languageChange}
+            id="fade-button"
+            aria-controls={open ? "fade-menu" : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? "true" : undefined}
+            onClick={handleClick}
+          >
             <div>
               <Image
                 src={global}
@@ -28,7 +54,7 @@ const LoginForm = () => {
                 height="auto 15"
                 alt="global hapster"
               />
-              <p>English</p>
+              <p>{language}</p>
             </div>
             <Image
               src={arrowDown}
@@ -36,6 +62,38 @@ const LoginForm = () => {
               alt="arrow_down"
             />
           </div>
+          <Menu
+            id="fade-menu"
+            MenuListProps={{
+              "aria-labelledby": "fade-button",
+            }}
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            TransitionComponent={Fade}
+          >
+            <MenuItem
+              onClick={() => {
+                handleClickLang("English");
+              }}
+            >
+              English
+            </MenuItem>
+            <MenuItem
+              onClick={() => {
+                handleClickLang("French");
+              }}
+            >
+              French
+            </MenuItem>
+            <MenuItem
+              onClick={() => {
+                handleClickLang("Spanish");
+              }}
+            >
+              Spanish
+            </MenuItem>
+          </Menu>
         </div>
         <Formik
           validationSchema={schema}
