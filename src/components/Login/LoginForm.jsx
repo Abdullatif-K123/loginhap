@@ -89,19 +89,7 @@ const LoginForm = () => {
                   onBlur={handleBlur}
                   value={values.password}
                 />
-                <div className={classes.rememberForget}>
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        className={classes.Checkbox}
-                        size="small"
-                        style={{ borderRadius: "59px" }}
-                      />
-                    }
-                    label={<p className={classes.remember}>Remember me</p>}
-                  />
-                  <p>Forgot your password?</p>
-                </div>
+
                 <Buttons title={"Login"} type={"submit"} />
               </Form>
             </div>
