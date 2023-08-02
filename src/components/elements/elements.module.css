@@ -14,7 +14,7 @@
 }
 .inputsection {
   border-radius: 30pt;
-  border: 1pt solid rgb(222, 222, 222);
+  border: 1px solid rgb(222, 222, 222);
   outline: none;
   height: 38px;
   padding: 0px 20px;
@@ -22,7 +22,7 @@
   color: rgb(59, 59, 59);
 }
 .inputError {
-  border-color: red;
+  border-color: rgb(229, 16, 16);
 }
 
 /* Button section */
@@ -43,4 +43,29 @@
 .btnLogin:hover {
   background-color: rgb(251, 178, 34);
   box-shadow: none;
+}
+
+@media (max-width: 480px) {
+  .inputMain > label {
+    font-size: 13px;
+  }
+  .inputsection {
+    height: 35px;
+  }
+  .btnLogin {
+    height: 40px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 390px) {
+  .inputMain > label {
+    font-size: 12px;
+  }
+  .inputsection {
+    height: 33px;
+  }
+  .btnLogin {
+    height: 38px;
+    font-size: 12px;
+  }
 }

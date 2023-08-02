@@ -7,17 +7,20 @@
 @font-face {
   font-family: "sora";
   font-weight: bold;
-  src: url("../../public//assets//fonts/Sora-Bold.ttf");
+  src: url("../../public//assets//fonts/Sora-Bold.ttf") format("woff2"),
+    url("../../public//assets//fonts/Sora-Bold.ttf") format("woff");
 }
 @font-face {
   font-family: "sora";
   font-weight: 600;
-  src: url("../../public//assets//fonts/Sora-SemiBold.ttf");
+  src: url("../../public//assets//fonts/Sora-SemiBold.ttf") format("woff2"),
+    url("../../public//assets//fonts/Sora-SemiBold.ttf") format("woff");
 }
 @font-face {
   font-family: "sora";
   font-weight: 400;
-  src: url("../../public//assets//fonts/Sora-Regular.ttf");
+  src: url("../../public//assets//fonts/Sora-Regular.ttf") format("woff2"),
+    url("../../public//assets//fonts/Sora-Regular.ttf") format("woff");
 }
 
 body {
