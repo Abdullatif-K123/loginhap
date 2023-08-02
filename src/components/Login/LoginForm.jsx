@@ -144,7 +144,7 @@ const LoginForm = () => {
                   touched={touched.password}
                 />
                 {touched.password && <p>{errors.password}</p>}
-                <Buttons title={"Login"} type={"submit"} />
+                <Buttons title={"Login"} />
               </Form>
             </div>
           )}
