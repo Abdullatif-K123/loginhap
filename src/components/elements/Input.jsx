@@ -2,7 +2,8 @@ import { forwardRef } from "react";
 import classes from "./elements.module.css";
 // eslint-disable-next-line react/display-name
 const Input = forwardRef(
-  ({ label, id, values, error, handleChange, ...rest }, ref) => {
+  ({ label, id, values, error, touched, handleChange, ...rest }, ref) => {
+    console.log(touched);
     return (
       <div className={classes.inputMain}>
         <label htmlFor={id}>{label}</label>
@@ -11,7 +12,7 @@ const Input = forwardRef(
           ref={ref}
           {...rest}
           className={`${classes.inputsection} ${
-            error ? classes.inputError : null
+            error ? (touched ? classes.inputError : null) : null
           }`}
         />
       </div>

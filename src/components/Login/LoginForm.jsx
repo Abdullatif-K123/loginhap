@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import classes from "./login.module.css";
 import hapsterLogo from "/public/assets/img/LOGO-hapster-quadri-cmjn.png";
 import Image from "next/image";
@@ -9,11 +9,6 @@ import arrowDown from "/public/assets/svg/arrow.svg";
 import { Formik, Form } from "formik";
 import schema from "@/validations/login";
 const LoginForm = () => {
-  const inputNRef = useRef(null);
-  const inputPRef = useRef(null);
-
-  //handling submit singIn
-
   return (
     <div className={classes.container}>
       <div className={classes.boxContainer}>
@@ -60,7 +55,6 @@ const LoginForm = () => {
             handleChange,
             handleBlur,
             handleSubmit,
-            isSubmitting,
           }) => (
             <div className={classes.loginBox}>
               <p>Login</p>
@@ -69,26 +63,28 @@ const LoginForm = () => {
                   label={"Username or email"}
                   id={"name"}
                   error={errors.usernameOrEmail}
-                  ref={inputNRef}
                   type={"text"}
                   name={"usernameOrEmail"}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.usernameOrEmail}
+                  touched={touched.usernameOrEmail}
                 />
-                <p>{errors.usernameOrEmail}</p>
+                {touched.usernameOrEmail && errors.usernameOrEmail && (
+                  <p>{errors.usernameOrEmail}</p>
+                )}
                 <Input
                   label={"Password"}
                   id={"password"}
-                  ref={inputPRef}
                   error={errors.password}
                   type={"password"}
                   name={"password"}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.password}
+                  touched={touched.password}
                 />
-                <p>{errors.password}</p>
+                {touched.password && <p>{errors.password}</p>}
                 <Buttons title={"Login"} type={"submit"} />
               </Form>
             </div>
