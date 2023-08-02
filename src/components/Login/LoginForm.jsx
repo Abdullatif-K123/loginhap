@@ -2,14 +2,13 @@ import React, { useRef } from "react";
 import classes from "./login.module.css";
 import hapsterLogo from "/public/assets/svg/logo.svg";
 import Image from "next/image";
-import LanguageIcon from "@mui/icons-material/Language";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Input from "../elements/Input";
 import Buttons from "../elements/Button";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import { Sora } from "next/font/google";
-const sora = Sora({ weight: "700", style: "normal", subsets: ["latin"] });
+import global from "/public/assets/svg/global.svg";
+import arrowDown from "/public/assets/svg/arrow.svg";
 const LoginForm = () => {
   const inputNRef = useRef(null);
   const inputPRef = useRef(null);
@@ -25,14 +24,23 @@ const LoginForm = () => {
           />
           <div className={classes.languageChange}>
             <div>
-              <LanguageIcon />
+              <Image
+                src={global}
+                width="auto 17"
+                height="auto 15"
+                alt="global hapster"
+              />
               <p>English</p>
             </div>
-            <KeyboardArrowDownIcon className={classes.iconArrow} />
+            <Image
+              src={arrowDown}
+              className={classes.iconArrow}
+              alt="arrow_down"
+            />
           </div>
         </div>
         <div className={classes.loginBox}>
-          <p className={sora.className}>Login</p>
+          <p>Login</p>
           <div className={classes.loginContainer}>
             <Input
               label={"Username or email"}

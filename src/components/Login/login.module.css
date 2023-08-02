@@ -25,6 +25,7 @@
 .languageChange {
   display: flex;
   column-gap: 12px;
+  align-items: center;
   color: rgb(85, 155, 180);
   font-family: "sora";
   font-weight: bold;
@@ -38,10 +39,9 @@
   font-size: 14pt;
 }
 .iconArrow {
-  width: 20.8pt;
-  height: 20.2pt;
+  width: 12.8pt;
+  height: 6.7px;
   cursor: pointer;
-  color: rgb(59, 59, 59);
 }
 .loginBox {
   background-color: rgb(255, 255, 255);
