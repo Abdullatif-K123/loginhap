@@ -98,11 +98,10 @@
 @media (max-width: 480px) {
   .headSection {
     max-width: 380px;
-    padding: 7px 0 15px 0;
   }
   .loginBox {
     max-width: 350px;
-    padding: 20px 19px 22px 19.5px;
+    padding: 30px 19px 30px 19.5px;
     row-gap: 18px;
   }
   .loginBox > p {
@@ -119,18 +118,48 @@
     font-size: 10pt;
   }
 }
-/* Styles for screens 480px wide or less */
-@media (max-width: 390px) {
+/* Styles for screens 390px wide or less */
+@media (max-width: 392px) {
   .headSection {
     max-width: 350px;
-    padding: 6px 0 14px 0;
   }
   .languageChange > p {
     font-size: 12pt;
   }
   .loginBox {
     max-width: 320px;
-    padding: 20px 19px 22px 19.5px;
+    padding: 30px 19px 30px 19.5px;
+    row-gap: 18px;
+  }
+  .loginBox > p {
+    font-size: 15px;
+  }
+  .loginContainer {
+    row-gap: 22px;
+  }
+  .rememberForget {
+    font-size: 11pt;
+    padding: 15px 0px;
+  }
+  .remember {
+    font-size: 10pt;
+  }
+  .logoIcon {
+    width: 160px;
+    height: 83px;
+  }
+}
+/* Styles for screens 360px wide or less */
+@media (max-width: 361px) {
+  .headSection {
+    max-width: 335px;
+  }
+  .languageChange > p {
+    font-size: 12pt;
+  }
+  .loginBox {
+    max-width: 310px;
+    padding: 30px 15px 30px 15.5px;
     row-gap: 18px;
   }
   .loginBox > p {

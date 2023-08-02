@@ -15,10 +15,7 @@ const LoginForm = () => {
   const inputPRef = useRef(null);
 
   //handling submit singIn
-  const handleSubmit = async (e, values, { resetForm }) => {
-    e.preventDefault();
-    console.log("hello");
-  };
+
   return (
     <div className={classes.container}>
       <div className={classes.boxContainer}>
