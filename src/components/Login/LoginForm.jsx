@@ -12,11 +12,10 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Fade from "@mui/material/Fade";
 const LoginForm = () => {
-  //DropDown languages selection implements
+  //DropDown languages selection implement
   const [anchorEl, setAnchorEl] = useState(null);
   const [language, setLanguage] = useState("English");
   var open = Boolean(anchorEl);
-  console.log(open);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -72,6 +71,7 @@ const LoginForm = () => {
             open={open}
             onClose={handleClose}
             TransitionComponent={Fade}
+            className={classes.menuLogin}
           >
             <MenuItem
               onClick={() => {

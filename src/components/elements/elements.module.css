@@ -69,3 +69,10 @@
     font-size: 12px;
   }
 }
+
+/* Eelements styling for 780 min height */
+@media (min-height: 665px) {
+  .btnLogin {
+    margin-top: 30px;
+  }
+}

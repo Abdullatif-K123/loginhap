@@ -42,6 +42,12 @@
 .languageChange > p {
   font-size: 14pt;
 }
+.menuLogin {
+  margin-top: 7px;
+  vertical-align: top;
+  position: relative;
+  margin-right: -25px;
+}
 .iconArrow {
   width: 12.8pt;
   height: 6.7px;
@@ -124,7 +130,7 @@
   }
   .languageChange {
     position: absolute;
-    bottom: 8%;
+    bottom: 7%;
     margin: auto;
     right: 33%;
     z-index: 5;
@@ -245,5 +251,112 @@
   .logoIcon {
     width: 160px;
     height: 83px;
+  }
+}
+
+/* Styles for screens 667 highet or less */
+@media (min-height: 780px) {
+  .headSection {
+    max-width: 325px;
+    padding: 55px 0;
+  }
+  .languageChange > p {
+    font-size: 12pt;
+  }
+  .loginBox {
+    width: 90%;
+    padding: 45px 15px 35px 15.5px;
+    row-gap: 25px;
+  }
+  .loginBox > p {
+    font-size: 19px;
+  }
+  .loginContainer {
+    row-gap: 25px;
+  }
+  .rememberForget > p {
+    font-size: 9pt;
+  }
+  .remember {
+    font-size: 9pt;
+  }
+  .logoIcon {
+    width: 160px;
+    height: 83px;
+  }
+  .languageChange {
+    bottom: 5%;
+  }
+}
+/* Styles for screens 667 highet or less */
+@media (min-height: 667px) {
+  .headSection {
+    max-width: 325px;
+    padding: 45px 0;
+  }
+  .languageChange > p {
+    font-size: 12pt;
+  }
+  .loginBox {
+    width: 93%;
+    padding: 45px 15px 35px 15.5px;
+    row-gap: 25px;
+  }
+  .loginBox > p {
+    font-size: 19px;
+  }
+  .loginContainer {
+    row-gap: 20px;
+  }
+  .rememberForget > p {
+    font-size: 9pt;
+  }
+  .remember {
+    font-size: 9pt;
+  }
+  .logoIcon {
+    width: 160px;
+    height: 83px;
+  }
+  .languageChange {
+    bottom: 5%;
+  }
+}
+
+/* Styles for screens 667 highet or less */
+@media (max-height: 670px) {
+  .headSection {
+    max-width: 325px;
+    padding: 33px 0;
+  }
+  .languageChange > p {
+    font-size: 12pt;
+  }
+  .loginBox {
+    width: 90%;
+    padding: 30px 15px 30px 15.5px;
+    row-gap: 19px;
+  }
+  .loginBox > p {
+    font-size: 18px;
+  }
+  .loginContainer {
+    row-gap: 18px;
+  }
+  .rememberForget {
+    padding: 15px 0px;
+  }
+  .rememberForget > p {
+    font-size: 9pt;
+  }
+  .remember {
+    font-size: 9pt;
+  }
+  .logoIcon {
+    width: 160px;
+    height: 83px;
+  }
+  .languageChange {
+    bottom: 5%;
   }
 }
