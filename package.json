@@ -14,11 +14,13 @@
     "@mui/icons-material": "^5.14.1",
     "@mui/material": "^5.14.2",
     "@react-keycloak/web": "^3.4.0",
+    "axios": "^1.4.0",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
     "formik": "^2.4.3",
     "keycloak-js": "^22.0.1",
     "next": "13.4.12",
+    "next-auth": "^4.22.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "yup": "^1.2.0"

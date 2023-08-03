@@ -5,7 +5,7 @@ export default function Home() {
   const router = useRouter();
   router.replace("/login");
   return <>home page </>;
-} 
+}
 export async function getServerSideProps({ req, res }) {
   // Check if the user is authenticated
   const isAuthenticated = req.cookies.isAuthenticated;

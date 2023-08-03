@@ -255,7 +255,7 @@
 }
 
 /* Styles for screens 667 highet or less */
-@media (min-height: 780px) {
+@media (min-height: 780px) and (max-width: 414px) {
   .headSection {
     max-width: 325px;
     padding: 55px 0;
@@ -289,7 +289,7 @@
   }
 }
 /* Styles for screens 667 highet or less */
-@media (min-height: 667px) {
+@media (min-height: 667px) and (max-width: 414px) {
   .headSection {
     max-width: 325px;
     padding: 45px 0;
@@ -324,7 +324,7 @@
 }
 
 /* Styles for screens 667 highet or less */
-@media (max-height: 670px) {
+@media (max-height: 670px) and (max-width: 414px) {
   .headSection {
     max-width: 325px;
     padding: 33px 0;

@@ -8,13 +8,18 @@ import global from "/public/assets/svg/global.svg";
 import arrowDown from "/public/assets/svg/arrow.svg";
 import { Formik, Form } from "formik";
 import schema from "@/validations/login";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Fade from "@mui/material/Fade";
+import { Menu, MenuItem, Fade } from "@mui/material";
+import { useRouter } from "next/router";
+import axios from "axios";
+import { signIn, signOut, useSession } from "next-auth/react";
 const LoginForm = () => {
-  //DropDown languages selection implement
+  const router = useRouter();
+  const { data: session } = useSession();
+  const [message, setMessage] = useState(null);
+  //DropDown languages selecting implementation
   const [anchorEl, setAnchorEl] = useState(null);
   const [language, setLanguage] = useState("English");
+
   var open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -99,12 +104,18 @@ const LoginForm = () => {
         <Formik
           validationSchema={schema}
           initialValues={{ usernameOrEmail: "", password: "" }}
-          onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
+          onSubmit={async (values, { setSubmitting }) => {
+            console.log(values);
 
-              setSubmitting(false);
-            }, 400);
+            const url = `http://staging-hsp.com:3000/api/v1/oauth/user/login?email=${values.usernameOrEmail}&password=${values.password}`;
+            try {
+              const response = await axios.get(url);
+              router.replace("/home");
+              console.log(response);
+            } catch (error) {
+              console.error(error);
+              setMessage("wrong email or password");
+            }
           }}
         >
           {({
@@ -145,6 +156,7 @@ const LoginForm = () => {
                 />
                 {touched.password && <p>{errors.password}</p>}
                 <Buttons title={"Login"} />
+                <p>{message}</p>
               </Form>
             </div>
           )}
