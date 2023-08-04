@@ -146,7 +146,7 @@
     justify-content: center;
     z-index: 5;
     border-top: 1px solid rgb(222, 222, 222);
-    padding-top: 50px;
+    padding-top: 40px;
     width: 80%;
   }
   .loginBox {
@@ -361,5 +361,11 @@
   }
   .languageChange {
     bottom: 5%;
+  }
+}
+
+@media (max-height: 554px) {
+  .languageChange {
+    opacity: 0;
   }
 }
