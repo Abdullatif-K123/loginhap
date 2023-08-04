@@ -1,0 +1,6 @@
+{
+  "login": "Connexion",
+  "email": "Nom d'utilisateur ou email",
+  "password": "Mot de passe",
+  "login_error": "mauvais email ou mot de passe"
+}

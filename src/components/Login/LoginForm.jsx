@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./login.module.css";
 import hapsterLogo from "/public/assets/img/LOGO-hapster-quadri-cmjn.png";
 import Image from "next/image";
@@ -8,14 +8,16 @@ import global from "/public/assets/svg/global.svg";
 import arrowDown from "/public/assets/svg/arrow.svg";
 import { Formik, Form } from "formik";
 import schema from "@/validations/login";
-import { Menu, MenuItem, Fade } from "@mui/material";
+import { Menu, MenuItem, Fade, Snackbar } from "@mui/material";
 import { useRouter } from "next/router";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
+import SneakBar from "../elements/SneakBar";
 import { signIn, signOut, useSession } from "next-auth/react";
 const LoginForm = () => {
+  const { t, i18n } = useTranslation();
   const router = useRouter();
-  const { data: session } = useSession();
-  const [message, setMessage] = useState(null);
+  const [waiting, setWaiting] = useState(null);
   //DropDown languages selecting implementation
   const [anchorEl, setAnchorEl] = useState(null);
   const [language, setLanguage] = useState("English");
@@ -27,12 +29,23 @@ const LoginForm = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setWaiting(false);
+    }, [4000]);
+    return () => clearTimeout(timer);
+  }, [waiting]);
   //Changing the language handler
   const handleClickLang = (lang) => {
     setLanguage(lang);
+    lang === "English"
+      ? i18n.changeLanguage("en")
+      : lang === "Spanish"
+      ? i18n.changeLanguage("es")
+      : i18n.changeLanguage("fr");
     handleClose();
   };
+
   return (
     <div className={classes.container}>
       <div className={classes.boxContainer}>
@@ -100,6 +113,7 @@ const LoginForm = () => {
               Spanish
             </MenuItem>
           </Menu>
+          {waiting && <SneakBar start={"starting"} />}
         </div>
         <Formik
           validationSchema={schema}
@@ -114,7 +128,7 @@ const LoginForm = () => {
               console.log(response);
             } catch (error) {
               console.error(error);
-              setMessage("wrong email or password");
+              setWaiting(true);
             }
           }}
         >
@@ -127,10 +141,10 @@ const LoginForm = () => {
             handleSubmit,
           }) => (
             <div className={classes.loginBox}>
-              <p>Login</p>
+              <p>{t("login")}</p>
               <Form className={classes.loginContainer} onSubmit={handleSubmit}>
                 <Input
-                  label={"Username or email"}
+                  label={t("email")}
                   id={"name"}
                   error={errors.usernameOrEmail}
                   type={"text"}
@@ -144,7 +158,7 @@ const LoginForm = () => {
                   <p>{errors.usernameOrEmail}</p>
                 )}
                 <Input
-                  label={"Password"}
+                  label={t("password")}
                   id={"password"}
                   error={errors.password}
                   type={"password"}
@@ -154,9 +168,10 @@ const LoginForm = () => {
                   value={values.password}
                   touched={touched.password}
                 />
-                {touched.password && <p>{errors.password}</p>}
-                <Buttons title={"Login"} />
-                <p>{message}</p>
+                {touched.password && errors.password && (
+                  <p>{errors.password}</p>
+                )}
+                <Buttons title={t("login")} />
               </Form>
             </div>
           )}

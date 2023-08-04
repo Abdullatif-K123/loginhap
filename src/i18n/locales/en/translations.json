@@ -1,0 +1,6 @@
+{
+  "login": "Login",
+  "email": "Username or email",
+  "password": "Password",
+  "login_error": "Wrong email or password"
+}

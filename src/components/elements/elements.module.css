@@ -8,7 +8,7 @@
   color: rgb(59, 59, 59);
   font-family: "sora", sans-serif;
   font-weight: 400;
-  width: 133pt;
+
   height: 18pt;
   padding-left: 17px;
 }
@@ -45,7 +45,83 @@
   box-shadow: none;
 }
 
+/* Sneakbar Styling */
+.sneakBar {
+  position: fixed;
+
+  top: 4%;
+  right: 0.2%;
+  display: flex;
+  align-items: center;
+  background-color: rgb(230, 230, 230);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 5px 30px 5px 10px;
+  column-gap: 10px;
+  animation: slideInFromRight 1s ease-in-out;
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(90%);
+    opacity: 0;
+    overflow: hidden;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    overflow: hidden;
+  }
+}
+.sneakBarHidden {
+  animation: slideInFromLeft 1s ease-in-out;
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.sneakBar > p {
+  color: rgb(183, 65, 0);
+  font-family: "Sora", sans-serif;
+  font-size: 11pt;
+  font-weight: 400;
+}
+.iconWarning {
+  width: 23px;
+  height: 24px;
+}
+.iconCancel {
+  width: 11px;
+  height: 11px;
+  margin-left: 8px;
+  cursor: pointer;
+  transform: rotate(45deg);
+}
 @media (max-width: 480px) {
+  .sneakBar {
+    padding: 5px 15px 5px 5px;
+    column-gap: 5px;
+    top: 19%;
+  }
+
+  .sneakBar > p {
+    font-size: 9pt;
+  }
+  .iconWarning {
+    width: 20px;
+    height: 20px;
+  }
+  .iconCancel {
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+  }
   .inputMain > label {
     font-size: 13px;
   }
