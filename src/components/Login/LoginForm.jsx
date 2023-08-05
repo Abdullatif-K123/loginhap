@@ -121,7 +121,7 @@ const LoginForm = () => {
           onSubmit={async (values, { setSubmitting }) => {
             console.log(values);
 
-            const url = `http://staging-hsp.com:3000/api/v1/oauth/user/login?email=${values.usernameOrEmail}&password=${values.password}`;
+            const url = `//staging-hsp.com:3000/api/v1/oauth/user/login?email=${values.usernameOrEmail}&password=${values.password}`;
             try {
               const response = await axios.get(url);
               router.replace("/home");
